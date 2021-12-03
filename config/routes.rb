@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   get '/users/:id' , to: 'users#show'
   get '/users/:id/edit', to: 'users#edit', :as => :user
   patch '/users/:id/edit' => 'users#update'
+  get '/intervention/getBuilding/:customer_id', to: 'interventions#getBuilding'
+  get '/intervention/getBattery/:building_id', to: 'interventions#getBattery'
+  get '/intervention/getColumn/:battery_id', to: 'interventions#getColumn'
+  get '/intervention/getElevator/:column_id', to: 'interventions#getElevator'
+  post 'intervention/post' => 'interventions#submit'
 
   get 'dropbox/auth' => 'dropbox#auth'
   get 'dropbox/auth_callback' => 'dropbox#auth_callback'

@@ -81,35 +81,35 @@ ActiveAdmin.register_page "Dashboard" do
     end
   end
   content title: proc { I18n.t("active_admin.dashboard") } do
-    PsqlQuery = PgConnection::MyConnection
-    first_2_question = column_chart [{ name: "Contacts Requests", data: {
-                                      "January" => gapm(PsqlQuery, 1, "fact_contacts"),
-                                      "February" => gapm(PsqlQuery, 2, "fact_contacts"),
-                                      "March" => gapm(PsqlQuery, 3, "fact_contacts"),
-                                      "April" => gapm(PsqlQuery, 4, "fact_contacts"),
-                                      "May" => gapm(PsqlQuery, 5, "fact_contacts"),
-                                      "June" => gapm(PsqlQuery, 6, "fact_contacts"),
-                                      "July" => gapm(PsqlQuery, 7, "fact_contacts"),
-                                      "August" => gapm(PsqlQuery, 8, "fact_contacts"),
-                                      "September" => gapm(PsqlQuery, 9, "fact_contacts"),
-                                      "October" => gapm(PsqlQuery, 10, "fact_contacts"),
-                                      "November" => gapm(PsqlQuery, 11, "fact_contacts"),
-                                      "December" => gapm(PsqlQuery, 12, "fact_contacts"),
-                                    } },
-                                     { name: "Quotes Requests", data: {
-                                      "January" => gapm(PsqlQuery, 1, "fact_quotes"),
-                                      "February" => gapm(PsqlQuery, 2, "fact_quotes"),
-                                      "March" => gapm(PsqlQuery, 3, "fact_quotes"),
-                                      "April" => gapm(PsqlQuery, 4, "fact_quotes"),
-                                      "May" => gapm(PsqlQuery, 5, "fact_quotes"),
-                                      "June" => gapm(PsqlQuery, 6, "fact_quotes"),
-                                      "July" => gapm(PsqlQuery, 7, "fact_quotes"),
-                                      "August" => gapm(PsqlQuery, 8, "fact_quotes"),
-                                      "September" => gapm(PsqlQuery, 9, "fact_quotes"),
-                                      "October" => gapm(PsqlQuery, 10, "fact_quotes"),
-                                      "November" => gapm(PsqlQuery, 11, "fact_quotes"),
-                                      "December" => gapm(PsqlQuery, 12, "fact_quotes"),
-                                    } }]
+  #   PsqlQuery = PgConnection::MyConnection
+  #   first_2_question = column_chart [{ name: "Contacts Requests", data: {
+  #                                     "January" => gapm(PsqlQuery, 1, "fact_contacts"),
+  #                                     "February" => gapm(PsqlQuery, 2, "fact_contacts"),
+  #                                     "March" => gapm(PsqlQuery, 3, "fact_contacts"),
+  #                                     "April" => gapm(PsqlQuery, 4, "fact_contacts"),
+  #                                     "May" => gapm(PsqlQuery, 5, "fact_contacts"),
+  #                                     "June" => gapm(PsqlQuery, 6, "fact_contacts"),
+  #                                     "July" => gapm(PsqlQuery, 7, "fact_contacts"),
+  #                                     "August" => gapm(PsqlQuery, 8, "fact_contacts"),
+  #                                     "September" => gapm(PsqlQuery, 9, "fact_contacts"),
+  #                                     "October" => gapm(PsqlQuery, 10, "fact_contacts"),
+  #                                     "November" => gapm(PsqlQuery, 11, "fact_contacts"),
+  #                                     "December" => gapm(PsqlQuery, 12, "fact_contacts"),
+  #                                   } },
+  #                                    { name: "Quotes Requests", data: {
+  #                                     "January" => gapm(PsqlQuery, 1, "fact_quotes"),
+  #                                     "February" => gapm(PsqlQuery, 2, "fact_quotes"),
+  #                                     "March" => gapm(PsqlQuery, 3, "fact_quotes"),
+  #                                     "April" => gapm(PsqlQuery, 4, "fact_quotes"),
+  #                                     "May" => gapm(PsqlQuery, 5, "fact_quotes"),
+  #                                     "June" => gapm(PsqlQuery, 6, "fact_quotes"),
+  #                                     "July" => gapm(PsqlQuery, 7, "fact_quotes"),
+  #                                     "August" => gapm(PsqlQuery, 8, "fact_quotes"),
+  #                                     "September" => gapm(PsqlQuery, 9, "fact_quotes"),
+  #                                     "October" => gapm(PsqlQuery, 10, "fact_quotes"),
+  #                                     "November" => gapm(PsqlQuery, 11, "fact_quotes"),
+  #                                     "December" => gapm(PsqlQuery, 12, "fact_quotes"),
+  #                                   } }]
 
     div "Hello #{current_user}", id: "Audio" do
     end
@@ -124,11 +124,11 @@ ActiveAdmin.register_page "Dashboard" do
     audio controls: true do
       source src: audio_path("/starwars_suck.wav"), type: "audio/wav"
     end
-    panel "First and Second Question" do
-      first_2_question
-    end
-    panel "Third Question" do
-      line_chart [{ name: "Amount Of Elevator Per Customer", data: make_data_gebp_graph(PsqlQuery) }]
-    end
+    # panel "First and Second Question" do
+    #   first_2_question
+    # end
+    # panel "Third Question" do
+    #   line_chart [{ name: "Amount Of Elevator Per Customer", data: make_data_gebp_graph(PsqlQuery) }]
+    # end
   end
 end
