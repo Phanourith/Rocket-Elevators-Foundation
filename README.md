@@ -31,15 +31,16 @@ They can be seen on the database named LEVY_POSTGRES in the postgres server we h
 To access backoffice
 
 Email: nicolas.genest@codeboxx.biz
+<br>
 password: password
 
 you will have to create a local_env file inisde the config folder
 and put copy paste these.
 
-DATABASE_HOST: "localhost"
-POSTGRESQL_DATABASE_DBNAME: "data_warehouse"
-POSTGRESQL_DATABASE_HOST: "localhost"
-POSTGRESQL_DATABASE_PASSWORD: "password"
-POSTGRESQL_DATABASE_USER: "postgres"
-ZENDESK_EMAIL: "phanourithkeosavang@gmail.com"
+DATABASE_HOST: "localhost"<br>
+POSTGRESQL_DATABASE_DBNAME: "data_warehouse"<br>
+POSTGRESQL_DATABASE_HOST: "localhost"<br>
+POSTGRESQL_DATABASE_PASSWORD: "password"<br>
+POSTGRESQL_DATABASE_USER: "postgres"<br>
+ZENDESK_EMAIL: "phanourithkeosavang@gmail.com"<br>
 ZENDESK_API_KEY: "dyyJYNYVF2Gn5thBoWRPxqyslJMJr0lUH4WEyd3t"
